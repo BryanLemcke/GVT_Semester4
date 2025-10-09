@@ -1,29 +1,49 @@
-<!DOCTYPE html5>
-<html>
-	<head>
-		<script>
-			window.onload = function() {
-				readTextFile("data/sample.txt", displayText);
-			};
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Drehende Scheibe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Drehende 2D-Scheibe</h1>
 
-			function displayText(text) {
-				document.write(text);
-			}
+  <div class="viewer">
+    <img id="cd" src="images/cd_0.png" alt="Rotierende Scheibe">
+  </div>
 
-			function readTextFile(file, callback) {
-				var xhr = new XMLHttpRequest();
-				xhr.open("GET", file, true);
-				xhr.onreadystatechange = function() {
-					if (xhr.readyState === 4) {
-						if (xhr.status === 200) {
-							callback(xhr.responseText);
-						}
-					}
-				};
-				xhr.send(null);
-			}
-		</script>
-	</head>
-	<body>
-	</body>
+  <div class="controls">
+    <button id="left">Links (l)</button>
+    <button id="auto">Auto (a)</button>
+    <button id="right">Rechts (r)</button>
+  </div>
+
+  <p class="sources">
+    Inspirationsbild: <a href="https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301"> https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301 </a>
+  </p>
+
+  <h2>Bonus Aufgabe</h2>
+  <p class="sources">
+  Basierend auf einem KI-generierten Inspirationsbild
+  </p>
+   <div class="bonus-container">
+    <div class="bonus">
+      <img id="charManual" src="images/bonus_1.png" alt="Charakter Frame Viewer">
+      <div class="bonus-controls">
+        <button id="prevFrame"> Zurück (b)</button>
+        <button id="playAllOnce">Auto (p)</button>
+        <button id="nextFrame">Vorwärts (f)</button>
+      </div>
+    </div>
+
+    <div class="bonus">
+      <img id="char" src="images/bonus_1.png" alt="Charakteranimation">
+      <div class="bonus-controls">
+        <button id="playVariation"> Zufällige Variation abspielen (v)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
