@@ -1,4 +1,4 @@
-
+{
 const GRID_W = 40;  
 const GRID_H = 40;
 const FLIP_Y = false;
@@ -17,7 +17,7 @@ const paths = [
   },
 ];
 
-const canvas = document.getElementById('glcanvas');
+const canvas = document.getElementById('glcanvas2');
 const gl = canvas && canvas.getContext('webgl', { antialias: true });
 
 function resize() {
@@ -117,3 +117,4 @@ function draw() {
   }
 }
 draw();
+}
