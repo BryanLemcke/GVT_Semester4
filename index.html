@@ -6,55 +6,80 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1> ESA1 - Drehende 2D-Scheibe</h1>
 
-  <div class="viewer">
-    <img id="cd" src="images/cd_0.png" alt="Rotierende Scheibe">
-  </div>
+  <!-- Menü -->
+  <nav>
+    <a href="#esa1" id="tab-esa1">ESA 1</a>
+    <a href="#esa2" id="tab-esa2">ESA 2</a>
+    <a href="#esa3" id="tab-esa3">ESA 3</a>
+    <a href="#esa4" id="tab-esa4">ESA 4</a>
+  </nav>
 
-  <div class="controls">
-    <button id="left">Links (l)</button>
-    <button id="auto">Auto (a)</button>
-    <button id="right">Rechts (r)</button>
-  </div>
+  <!-- ESA 1 -->
+  <section id="esa1" class="view" hidden>
+    <h1>ESA1 – Drehende 2D-Scheibe</h1>
 
-  <p class="sources">
-    Inspirationsbild: <a href="https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301"> https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301 </a>
-  </p>
-
-  <h2>Bonus Aufgabe</h2>
-  <p class="sources">
-  Basierend auf einem KI-generierten Inspirationsbild
-  </p>
-   <div class="bonus-container">
-    <div class="bonus">
-      <img id="charManual" src="images/bonus_1.png" alt="Charakter Frame Viewer">
-      <div class="bonus-controls">
-        <button id="prevFrame"> Zurück (b)</button>
-        <button id="playAllOnce">Auto (p)</button>
-        <button id="nextFrame">Vorwärts (f)</button>
-      </div>
+    <div class="viewer">
+      <img id="cd" src="images/cd_0.png" alt="Rotierende Scheibe">
     </div>
 
-    <div class="bonus">
-      <img id="char" src="images/bonus_1.png" alt="Charakteranimation">
-      <div class="bonus-controls">
-        <button id="playVariation"> Zufällige Variation abspielen (v)</button>
+    <div class="controls">
+      <button id="left">Links (l)</button>
+      <button id="auto">Auto (a)</button>
+      <button id="right">Rechts (r)</button>
+    </div>
+
+    <p class="sources">
+      Inspirationsbild:
+      <a href="https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301">
+        https://www.pixilart.com/art/compact-disc-bc099f8f302f?ft=challenges&ft_id=1301
+      </a>
+    </p>
+
+    <h2>Bonus Aufgabe</h2>
+    <p class="sources">Basierend auf einem KI-generierten Inspirationsbild</p>
+    <div class="bonus-container">
+      <div class="bonus">
+        <img id="charManual" src="images/bonus_1.png" alt="Charakter Frame Viewer">
+        <div class="bonus-controls">
+          <button id="prevFrame">Zurück (b)</button>
+          <button id="playAllOnce">Auto (p)</button>
+          <button id="nextFrame">Vorwärts (f)</button>
+        </div>
+      </div>
+
+      <div class="bonus">
+        <img id="char" src="images/bonus_1.png" alt="Charakteranimation">
+        <div class="bonus-controls">
+          <button id="playVariation">Zufällige Variation abspielen (v)</button>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="esa1script.js"></script>
+  </section>
 
-  <h1>ESA 2 – 2D Geometrie aus Linien</h1>
-  <section id="esa2">
+  <!-- ESA 2 -->
+  <section id="esa2" class="view" hidden>
+    <h1>ESA 2 – 2D Geometrie aus Linien</h1>
     <canvas id="glcanvas2"></canvas>
   </section>
-  <script src="esa2script.js" defer></script>
 
-   <h1>ESA 3 – Farbig gefüllte 2D Geometrie </h1>
-  <section id="esa3">
+  <!-- ESA 3 -->
+  <section id="esa3" class="view" hidden>
+    <h1>ESA 3 – Farbig gefüllte 2D Geometrie</h1>
     <canvas id="glcanvas3"></canvas>
   </section>
-  <script src="esa3script.js" defer></script>
+
+  <!-- ESA 4 -->
+  <section id="esa4" class="view" hidden>
+    <h1>ESA 4 – Parametrisierte Flächen</h1>
+    <p class="sources">
+      Flächen: Tropfen, Horn, Kirschblütenblatt<br>
+      Quellen:
+      <a href="http://www.3d-meier.de/tut3/Seite0.html">http://www.3d-meier.de/tut3/Seite0.html</a><br>
+      Fläche wechseln: „B“ • Rotation: „R“ • Linien/Füllung/Modus: „L/F/M“
+    </p>
+    <canvas id="glcanvas4"></canvas>
+  </section>
+  <script src="websiteScript.js"></script>
 </body>
 </html>

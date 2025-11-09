@@ -50,7 +50,7 @@ h2 {
   padding: 8px 16px;
 }
 
-#glcanvas2, #glcanvas3 {
+#glcanvas2, #glcanvas3, #glcanvas4 {
   width: 600px;
   height: 600px;
   display: block;
@@ -58,4 +58,24 @@ h2 {
   background: #111;
   border: 1px solid #333;
 }
+nav {
+  display:flex; 
+  gap:.5rem; padding:10px; 
+  border-bottom:1px solid #223; 
+  position:sticky; top:0; 
+  background:#0b0f14; 
+  z-index:10; }
+    
+nav a { 
+  padding:.5rem .8rem; 
+  border:1px solid #223;
+  border-radius:.6rem; 
+  color:#e6f0ff; 
+  text-decoration:none; }
+    
+nav a[aria-current="page"] { 
+  border-color:#5cc8ff; 
+  box-shadow:0 0 0 1px #5cc8ff inset; }
+    .view { padding:16px; }
+    [hidden] { display:none !important; }
 
