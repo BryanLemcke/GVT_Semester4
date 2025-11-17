@@ -1,11 +1,12 @@
  (function(){
-      const routes = ['esa1','esa2','esa3','esa4'];
+      const routes = ['esa1','esa2','esa3','esa4','esa5'];
       const loaded = new Set();
       const scriptMap = {
         esa1: 'esa1script.js',
         esa2: 'esa2script.js',
         esa3: 'esa3script.js',
-        esa4: 'esa4script.js'
+        esa4: 'esa4script.js',
+        esa5: 'esa5script.js'
       };
 
       function setActiveTab(id){

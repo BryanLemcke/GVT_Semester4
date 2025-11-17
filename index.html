@@ -13,6 +13,7 @@
     <a href="#esa2" id="tab-esa2">ESA 2</a>
     <a href="#esa3" id="tab-esa3">ESA 3</a>
     <a href="#esa4" id="tab-esa4">ESA 4</a>
+    <a href="#esa5" id="tab-esa5">ESA 5</a>
   </nav>
 
   <!-- ESA 1 -->
@@ -79,6 +80,30 @@
       Fläche wechseln: „B“ • Rotation: „R“ • Linien/Füllung/Modus: „L/F/M“
     </p>
     <canvas id="glcanvas4"></canvas>
+  </section>
+  <script src="websiteScript.js"></script>
+
+  <!-- ESA 5 -->
+  <section id="esa5" class="view" hidden>
+    <h1>ESA 5 – Kamerabewegung</h1>
+    <canvas id="glcanvas5"></canvas>
+    <div class="info">
+  <h2>Interaktion</h2>
+  <ul>
+    <code>←</code> / <code>→</code>: Kamera um die Szene drehen <br>
+    <code>n </code>/ <code>Shift + n</code>: Radius vergrößern/verkleinern <br>
+    <code>m </code>: Füllung/Linien umschalten
+  </ul>
+
+  <h2>Rekursive Kugel</h2>
+  <p>
+    Rekursionstiefe:
+    <button id="depthMinus">−</button>
+    <span id="depthValue">0</span>
+    <button id="depthPlus">+</button>
+  </p>
+</div>
+
   </section>
   <script src="websiteScript.js"></script>
 </body>
