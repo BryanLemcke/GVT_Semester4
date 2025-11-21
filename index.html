@@ -14,6 +14,7 @@
     <a href="#esa3" id="tab-esa3">ESA 3</a>
     <a href="#esa4" id="tab-esa4">ESA 4</a>
     <a href="#esa5" id="tab-esa5">ESA 5</a>
+    <a href="#esa6" id="tab-esa6">ESA 6</a>
   </nav>
 
   <!-- ESA 1 -->
@@ -81,7 +82,6 @@
     </p>
     <canvas id="glcanvas4"></canvas>
   </section>
-  <script src="websiteScript.js"></script>
 
   <!-- ESA 5 -->
   <section id="esa5" class="view" hidden>
@@ -103,8 +103,47 @@
     <button id="depthPlus">+</button>
   </p>
 </div>
-
   </section>
+
+  <!-- ESA 6 -->
+  <section id="esa6" class="view" hidden>
+    <h1>ESA 6 – Objekte bewegen - fliegende Kugeln</h1>
+    <canvas id="glcanvas6"></canvas>
+    <p>
+      <code>C</code> / <code>Shift+C</code> – Kamera um die Szene drehen <br>
+      <code>H</code> / <code>Shift+H</code> – Kamera nach oben/unten bewegen <br>
+      <code>D</code> / <code>Shift+D</code> – Abstand der Kamera ändern <br>
+      <code>O</code>, <code>F</code>, <code>P</code> – Orthografische / Frustum- / Perspektivische Projektion <br>
+      <code>V</code> / <code>Shift+V</code> – Öffnungswinkel (FOV) ändern <br>
+      <code>B</code> / <code>Shift+B</code> – Sichtvolumen (lrtb) ändern <br>
+      <code>K</code> – Animation der Kugeln und Torus ein-/ausschalten <br>
+    </p>
+    <script type="x-shader/x-vertex" id="vertexshader">
+			attribute vec3 aPosition;
+			attribute vec3 aNormal;
+
+			uniform mat4 uPMatrix;
+			uniform mat4 uMVMatrix;
+
+			varying vec4 vColor;
+
+			void main(){
+			gl_Position = uPMatrix * uMVMatrix * vec4(aPosition, 1.0);
+
+			vColor = vec4(aNormal.x, aNormal.y, aNormal.z, 1.0);
+			vColor = (vColor + 1.0) / 2.0;
+			}
+		</script>
+		<script type="x-shader/x-fragment" id="fragmentshader">
+			precision mediump float;
+			varying vec4 vColor;
+
+			void main() {
+			gl_FragColor = vColor;
+			}
+		</script>
+  </section>
+  <script src="gl-matrix.js"></script>
   <script src="websiteScript.js"></script>
 </body>
 </html>
