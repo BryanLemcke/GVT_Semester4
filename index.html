@@ -18,6 +18,7 @@
     <a href="#esa7" id="tab-esa7">ESA 7</a>
     <a href="#esa8" id="tab-esa8">ESA 8</a>
     <a href="#esa9" id="tab-esa9">ESA 9</a>
+    <a href="#esa10" id="tab-esa10">ESA 10</a>
   </nav>
 
   <!-- ESA 1 -->
@@ -195,6 +196,31 @@
       <a href="https://stockcake.com/i/neon-circuit-matrix_1885130_1285029">Neon Circuit Matrix</a> by <a href="https://stockcake.com">StockCake</a>
       </a>
     </p>
+    </div>
+  </section>
+
+  <!-- ESA 10 -->
+  <section id="esa10" class="view" hidden>
+    <h1>ESA 10  – Seeds Daten in 3D</h1>
+    <div class="legend">
+      <span class="dot kama"></span> Kama
+      <span class="dot rosa"></span> Rosa
+      <span class="dot canadian"></span> Canadian
+    </div>
+    <canvas id="glcanvas10"></canvas>
+    <script src="lib/tsne.js"></script>
+    <div class="info">
+      <p>
+        <button id="btnRestart">Neustart (r)</button>
+        <button id="btnStep">1 Schritt (t)</button>
+        <button id="btnStep10">10 Schritte (T)</button>
+        <button id="btnSave">Speichern (k)</button><br> <br>
+        <span>Schrittzähler: <span id="stepCount">0</span></span> <br> <br>
+         <code>W</code> / <code>S</code> – Kamera nach oben / unten in der XY-Ebene bewegen<br>
+        <code>A</code> / <code>D</code> – Kamera nach links / rechts in der XY-Ebene bewegen<br>
+        <code>←</code> / <code>→</code> – Szene um die Y-Achse drehen<br>
+        <code>↑</code> / <code>↓</code> – Szene um die X-Achse drehen
+      </p>
     </div>
   </section>
 
