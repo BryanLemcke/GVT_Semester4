@@ -50,7 +50,7 @@ h2 {
   padding: 8px 16px;
 }
 
-#glcanvas2, #glcanvas3, #glcanvas4, #glcanvas5, #glcanvas7, #glcanvas8, #glcanvas9  {
+#glcanvas2, #glcanvas3, #glcanvas4, #glcanvas5, #glcanvas7, #glcanvas8, #glcanvas9, #glcanvas10  {
   width: 600px;
   height: 600px;
   display: block;
@@ -83,3 +83,23 @@ nav a[aria-current="page"] {
     .view { padding:16px; }
     [hidden] { display:none !important; }
 
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.dot.kama { background: rgb(255, 51, 51); }
+.dot.rosa { background: rgb(51, 255, 51); }
+.dot.canadian { background: rgb(51, 102, 255); }

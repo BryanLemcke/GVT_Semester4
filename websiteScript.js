@@ -1,5 +1,5 @@
  (function(){
-      const routes = ['esa1','esa2','esa3','esa4','esa5','esa6','esa7','esa8','esa9'];
+      const routes = ['esa1','esa2','esa3','esa4','esa5','esa6','esa7','esa8','esa9','esa10'];
       const loaded = new Set();
       const scriptMap = {
         esa1: 'esa1script.js',
@@ -10,7 +10,8 @@
         esa6: 'esa6script.js',
         esa7: 'esa7script.js',
         esa8: 'esa8script.js',
-        esa9: 'esa9script.js'
+        esa9: 'esa9script.js',
+        esa10: 'esa10script.js'
       };
 
       function setActiveTab(id){
